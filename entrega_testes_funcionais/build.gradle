@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile group: 'org.json', name: 'json', version: '20200518'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.12'
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'entrega_testes_funcionais.App'
+}
+
+
+
+test{
+    useJUnitPlatform()
+}
+
+ 
+
+run{
+    standardInput = System.in
+}
