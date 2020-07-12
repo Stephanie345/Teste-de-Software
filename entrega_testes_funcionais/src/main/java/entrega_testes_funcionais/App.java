@@ -25,7 +25,7 @@ public class App {
         Controle inter = new Controle();
         System.out.println("Insira o dia: ");
         int dia = inter.dia();
-        System.out.println("Insira o Valor do aluguel: ");
+        System.out.println("Insira o Valor do aluguel: Ex: 120,00 ");
         float valorNominal = inter.valor();
 
         // chamando a funcao calculo
