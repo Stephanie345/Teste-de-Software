@@ -8,3 +8,9 @@ Funcionalidade: colocar a primeira letra em maiúscula
 
 
 Link vídeo: https://www.youtube.com/watch?v=1Me0OFzvKEw
+
+----------------------------------------------------------
+
+API Web aluguebug
+
+Link Vídeo: https://www.youtube.com/watch?v=bgq6CIciACU
