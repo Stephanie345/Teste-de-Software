@@ -62,16 +62,16 @@ public class App {
                 HttpResponse resp = client.execute(httpGet);
                 // instanciando a classe entity
                 HttpEntity httpEntity = resp.getEntity();
-                String result = EntityUtils.toString(httpEntity);
+                String str_manipulada = EntityUtils.toString(httpEntity);
 
                 // manipulando os caracteres, pois a requisicao vem com caracteres a mais
-                result = result.split("\\{")[1];
-                result = result.split("\\}")[0];
-                result = "{" + result + "}";
-                result = result.replace("\\\"", "");
+                str_manipulada = str_manipulada.split("\\{")[1];
+                str_manipulada = str_manipulada.split("\\}")[0];
+                str_manipulada = "{" + str_manipulada + "}";
+                str_manipulada = str_manipulada.replace("\\\"", "");
 
                 // instanciando novo objeto da classe JSONObject com a String manipulada
-                JSONObject my_obj = new JSONObject(result);
+                JSONObject my_obj = new JSONObject(str_manipulada);
 
                 // metodo que retorna double 
                 float resultado = (float) my_obj.getDouble("valor_calculado");
