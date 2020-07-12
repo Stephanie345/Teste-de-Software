@@ -39,6 +39,16 @@ gradle-app.setting
 *.tmPreferences.cache
 *.stTheme.cache
 
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
 # Workspace files are user-specific
 *.sublime-workspace
 
