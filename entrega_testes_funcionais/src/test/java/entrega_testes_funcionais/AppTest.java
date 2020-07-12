@@ -3,12 +3,113 @@
  */
 package entrega_testes_funcionais;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import entrega_testes_funcionais.App;
+import java.net.URISyntaxException;
 public class AppTest {
-    @Test public void testAppHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    App aplicacao = new App();
+    float retorno;
+    float valorEsperado;
+    private static float valorn= 120;
+    double multa = valorn * 0.02;
+    double adicional = valorn * 0.001;
+    int diaPagamento = 15;
+    @Test 
+    public void diaInvalidoAbaixo1CTSC() throws URISyntaxException{
+        retorno = aplicacao.calculo( 0 , valorn);
+    	float valorEsperado = (float) -1;
+    	assertEquals(valorEsperado,retorno, 0.01);
     }
+    @Test 
+     public void CT2SC() throws URISyntaxException{//2,4
+        retorno = aplicacao.calculo( 2 , valorn);
+        valorEsperado = (float) 108;
+        assertEquals(valorEsperado,retorno, 0.01);
+     }
+    @Test 
+    public void CT4SC() throws URISyntaxException{//2,4
+        retorno = aplicacao.calculo( 4 , valorn);
+        valorEsperado = (float) 108;
+        assertEquals(valorEsperado,retorno, 0.01);
+     }
+    @Test 
+    public void CT6SC() throws URISyntaxException{//6,7,9,10
+        retorno = aplicacao.calculo( 6 , valorn);
+        valorEsperado = (float) 114;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT7SC() throws URISyntaxException{//6,7,9,10
+        retorno = aplicacao.calculo( 7 , valorn);
+        valorEsperado = (float) 114;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT9SC() throws URISyntaxException{//6,7,9,10
+        retorno = aplicacao.calculo( 9 , valorn);
+        valorEsperado = (float) 114;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT10SC() throws URISyntaxException{//6,7,9,10
+        retorno = aplicacao.calculo( 10 , valorn);
+        valorEsperado = (float) 114;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT11SC() throws URISyntaxException{//11,12,14,15
+        retorno = aplicacao.calculo( 11 , valorn);
+        valorEsperado = (float) 120;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT12SC() throws URISyntaxException{//11,12,14,15
+        retorno = aplicacao.calculo( 12 , valorn);
+        valorEsperado = (float) 120;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT14SC() throws URISyntaxException{//11,12,14,15
+        retorno = aplicacao.calculo( 14 , valorn);
+        valorEsperado = (float) 120;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT15SC() throws URISyntaxException{//11,12,14,15
+        retorno = aplicacao.calculo( 15 , valorn);
+        valorEsperado = (float) 120;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT17SC() throws URISyntaxException{//17,29
+        diaPagamento +=1;
+        if (diaPagamento >= diaPagamento && 17 < 31){
+            int multiplicador = diaPagamento - 16 + 1;
+            adicional = valorn * (0.001*multiplicador);
+        }
+        retorno = aplicacao.calculo( 17 , valorn);
+        valorEsperado = (float) 122.64;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test 
+    public void CT29SC() throws URISyntaxException{//17,29
+        diaPagamento +=1;
+        if (diaPagamento >= diaPagamento && 29 < 31){
+            int multiplicador = diaPagamento - 16 + 1;
+            adicional = valorn * (0.001*multiplicador);
+        }
+        retorno = aplicacao.calculo( 29 , valorn);
+        valorEsperado = (float) 124.08;
+        assertEquals(valorEsperado,retorno, 0.01);
+    }
+    @Test
+    public void diaInvalidoAcima30CTSC() throws URISyntaxException{
+        retorno = aplicacao.calculo( 31 , valorn);
+        valorEsperado = (float) -1;
+        assertEquals(valorEsperado,retorno, 0.01);
+
+    }
+   
+    
 }
