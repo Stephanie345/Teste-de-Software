@@ -22,3 +22,5 @@ Link Vídeo: https://www.youtube.com/watch?v=bgq6CIciACU
 Teste Parametrizado
 
 último commit realizado: e221236bb2ed6f9ff3c4f5b367a3b293c962955b
+
+Link Vídeo: https://www.youtube.com/watch?v=anneXiA-dCQ
