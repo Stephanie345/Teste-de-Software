@@ -18,8 +18,8 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("Stephanie \n Estou usando API fornecida pelo professor!\n");
-        System.out.println();
+        System.out.println("Stephánie Costta \nEstou usando API fornecida pelo professor!\n");
+       
 
         // instanciando a classe Controle
         Controle inter = new Controle();
@@ -32,7 +32,7 @@ public class App {
         float aluguel = App.calculo(dia, valorNominal);
 
         // exibindo o resultado
-        System.out.printf("valor calculado \n ");
+        System.out.printf("valor calculado");
         System.out.printf(" %.2f \n", aluguel);
     }
     public static float calculo(int dia, float valorNominal) {
@@ -76,7 +76,7 @@ public class App {
                 // metodo que retorna double 
                 float resultado = (float) my_obj.getDouble("valor_calculado");
                 return resultado;
-             } catch (Exception e) {
+             } catch (IOException e) {
                  // cache para armazenar o exception
                  Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, e);
              }
