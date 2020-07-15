@@ -24,3 +24,10 @@ Teste Parametrizado
 último commit realizado: e221236bb2ed6f9ff3c4f5b367a3b293c962955b
 
 Link Vídeo: https://www.youtube.com/watch?v=anneXiA-dCQ
+
+--------------------------------------------------------
+Teste de Recuperação
+
+último commit 0d2bf72b355eaf87be2bc4f5e02fe3776518fa5c
+
+Link do Vídeo:
