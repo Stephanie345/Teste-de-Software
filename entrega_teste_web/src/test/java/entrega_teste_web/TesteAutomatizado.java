@@ -33,8 +33,6 @@ public class TesteAutomatizado {
         
         app.visita();
         Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
-        
-        //assertEquals(app.InserirNovosDados(Double valorNominal, Integer dia),retornaResultado);
         assertEquals(retornaResultado, retorno);    
     }
     @AfterEach
