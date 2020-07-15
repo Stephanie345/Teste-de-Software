@@ -23,18 +23,28 @@ public class TesteAutomatizado {
     }
     
     @ParameterizedTest
-    @CsvSource(value ={"0,120,-1","2,120,108","4,120,108",
-                      "6,120,114","7,120,114","9,120,114",
-                      "10,120,114","11,120,120","12,120,120",
-                      "14,120,120","15,120,120","17,120,122.64",
+    @CsvSource(value ={"2,120,108","4,120,108","6,120,114",
+                       "7,120,114","10,120,114","11,120,120",
+                       "12,120,120","14,120,120","17,120,122.64",
                       "29,120,124.08","31,120,-1"},
                delimiter= ',')
-    public void adicionarCampos(int dia,Double valorNominal, Double retornaResultado) throws InterruptedException{
+    public void camposValidos(int dia,Double valorNominal, Double retornaResultado) throws InterruptedException{
         
         app.visita();
         Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
         assertEquals(retornaResultado, retorno);    
     }
+    
+    @ParameterizedTest
+    @CsvSource(value ={"0,120,-1","9,120,114","15,120,120",},
+               delimiter= ',')
+    public void camposInvalidos(int dia,Double valorNominal, Double retornaResultado) throws InterruptedException{
+        
+        app.visita();
+        Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
+        assertEquals(retornaResultado, retorno);    
+    }
+    
     @AfterEach
     public void finaliza(){
         driver.close();
