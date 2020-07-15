@@ -5,10 +5,8 @@ package entrega_teste_web;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import entrega_teste_web.App;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -37,33 +35,7 @@ public class TesteAutomatizado {
         Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
         
         //assertEquals(app.InserirNovosDados(Double valorNominal, Integer dia),retornaResultado);
-        assertEquals(retornaResultado, retorno);
-        
-        
-//        // abre chrome
-//        WebDriver driver = new ChromeDriver();
-//        
-//        
-//        driver.get("https://aluguebug.herokuapp.com/form");
-//
-//        // acessa o formulario
-//       
-//        
-//        WebElement dia = driver.findElement(By.id("dia"));
-//        WebElement valor_nominal =driver.findElement(By.id("valor_nominal"));
-//       
-//        
-//        
-//        dia.sendKeys("1");
-//        valor_nominal.sendKeys("120");
-//        
-//        WebElement botao =driver.findElement(By.id("botao"));
-//        botao.click();
-//        Thread.sleep(500);
-//        WebElement resposta=driver.findElement(By.id("resposta"));
-//        assertEquals("108",resposta.getAttribute("value"));
-        
- 
+        assertEquals(retornaResultado, retorno);    
     }
     @AfterEach
     public void finaliza(){
