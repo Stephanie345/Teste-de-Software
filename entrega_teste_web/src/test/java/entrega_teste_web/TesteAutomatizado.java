@@ -32,17 +32,17 @@ public class TesteAutomatizado {
         
         app.visita();
         Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
-        assertEquals(retornaResultado, retorno);    
+        assertEquals(retornaResultado, retorno, 0.01);    
     }
     
     @ParameterizedTest
-    @CsvSource(value ={"0,120,-1","9,120,114","15,120,120",},
+    @CsvSource(value ={"0,120,-1","9,120,114","15,120,120"},
                delimiter= ',')
     public void camposInvalidos(int dia,Double valorNominal, Double retornaResultado) throws InterruptedException{
         
         app.visita();
         Double retorno = app.InserirNovosDados(valorNominal, (Integer) dia).retornaResultado();
-        assertEquals(retornaResultado, retorno);    
+        assertEquals(retornaResultado, retorno,0.01);    
     }
     
     @AfterEach
