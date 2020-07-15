@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'org.junit.jupiter:junit-jupiter-params:5.3.1'
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+  
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'entrega_teste_web.App'
+}
+
+test{
+    useJUnitPlatform()
+}
+
+ 
+
